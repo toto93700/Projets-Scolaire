@@ -1,0 +1,104 @@
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct tableau_Entiers{
+  int *tab;
+  int capacite;
+  int nbE;}tableauEntiers;
+  tableauEntiers *creationTableau(int n){
+// alloue la mémoire a notre struct
+ tableauEntiers *TE=calloc(1,sizeof(tableauEntiers));
+ TE->capacite=n;
+ TE->tab=calloc(n,sizeof(int));
+ TE->nbE=0;
+ return(TE);
+ }
+
+ void destructionTableau(tableauEntiers *tb){ 
+ free(tb->tab);
+ free(tb);}
+ void ajoutValeurFin(tableauEntiers *t,int val){
+ int indiceNull;
+ int i;
+// Si  la capacité est atteinte on double la capacité actuelle
+ if(t->nbE==t->capacite){
+    // int *p;
+    t->capacite=(t->capacite)*2 ;// double  notre "capacité "
+    //p=realloc(t->tab,sizeof(int)*t->capacite);
+    tableauEntiers *tCopie=copie(t);
+    t=copie(tCopie);
+    destructionTableau(tCopie);
+     //t->tab=p;
+ }
+ //cherche un endrois  libre ou pouvoir ajouté un nombre
+ for(i=0;i<t->capacite;i++){
+    if(t->tab[i]==NULL){
+        indiceNull=i;
+        break;
+    }
+ } t->tab[indiceNull]=val;
+ t->nbE++; //incrémentation de notre nombre d'élément du tableau}
+void supprimeValeurFin(tableauEntiers *t){
+ int b,i;
+  b=0; // variable qui nous servira de boolean afin de sortir de notre boucle qui chek la derniere
+       // case occupé par un nombre dans notre tableau afin de la supprimé
+ if (t->nbE>0) {
+    //Parcoure le tableau de la fin jusquau début pour trouvé une casse occupé et la supprimer
+   for(i=t->capacite-1;i>=0;i--){
+    if(b==1){break;}
+     if(t->tab[i]!=NULL){
+       t->tab[i]=NULL;
+        b=1;
+    }
+  } t->nbE--;
+ }
+}void afficheTableau(tableauEntiers *t){
+ int i;
+  // Parcoure notre tableau et affiche toutes les valeurs
+  for(i=0;i<t->capacite;i++){    printf("Tab[%d]=%d \n",i,t->tab[i]); }}int taille (tableauEntiers *t){
+ return(t->nbE);
+}
+void ajoutValeur(int val,int ind,tableauEntiers *t){
+     if(ind>=t->capacite){
+     t->capacite= 2*ind ; //augmente notre capacité pour integré notre val a notre tableau
+     tableauEntiers *tCopie=copie(t);
+     t=copie(tCopie);
+     destructionTableau(tCopie);
+     //t->tab=realloc(t->tab,sizeof(int)*t->capacite); // }
+  t->tab[ind]=val; // affecte val a notre tableau a l"indice @ind
+  t->nbE++;
+ }
+void supprimeValeur(int ind,tableauEntiers *t){ 
+  t->tab[ind]=NULL;
+  if(t->nbE>=1){
+   t->nbE--;
+  }
+ }
+void supprimeToutesValeurs(int val, tableauEntiers *t){
+ // parcoure et supprime les occurences correspondante à @val dans notre tableau
+ for(int i=0;i<t->capacite;i++){
+    if(val==t->tab[i]){
+        t->tab[i]=NULL;
+        t->nbE--;
+    }
+ }
+}
+tableauEntiers *copie(tableauEntiers *t){
+ tableauEntiers *tCopie=malloc(sizeof(tableauEntiers));
+ tCopie->capacite = t->capacite;
+ tCopie->nbE=t->nbE;
+ tCopie->tab=calloc(t->capacite,sizeof(int));
+ for(int i=0;i<t->capacite;i++){
+    tCopie->tab[i]=t->tab[i];
+   }
+    return(tCopie);
+ }
+
+
+void main() {tableauEntiers *a=creationTableau(5);
+ajoutValeurFin(a,100);
+ajoutValeurFin(a,100);
+ajoutValeur(88,6,a);
+ajoutValeur(88,24,a);ajoutValeurFin(a,77);ajoutValeurFin(a,1);ajoutValeur(88,49,a);
+supprimeToutesValeurs(100,a);
+afficheTableau(a);
+destructionTableau(a);}

@@ -1,0 +1,11 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	loop              3006
+//	match             300C
+//	FINI              3011
+//	tab               3012
+//	taille            301C
+//	valchercher       301D
+

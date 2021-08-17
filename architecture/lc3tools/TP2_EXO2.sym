@@ -1,0 +1,12 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	suite0            3009
+//	suite             3010
+//	suite2            3013
+//	a                 3015
+//	z                 3016
+//	AA                3017
+//	ZZ                3018
+

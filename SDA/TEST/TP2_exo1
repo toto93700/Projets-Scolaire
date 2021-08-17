@@ -1,0 +1,117 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int i;
+
+
+
+typedef struct  Pil_e{
+
+int *tab;
+int n;
+int capacite;
+
+}Pile;
+
+Pile *genererPile(int c){
+
+ Pile *p=(Pile*)malloc(sizeof(Pile));
+ p->n=0;
+ p->capacite=c;
+ p->tab=(int*)malloc(sizeof(int)*c);
+return (p);
+
+}
+
+
+
+
+
+int estVide(Pile *p){
+
+ if(p->n==0) {
+   return(1);
+ }
+ else {
+   return(0);
+ }
+
+}
+
+Pile *push(int c, Pile *p){
+
+ if(p->n<p->capacite){
+    p->tab[p->n]=c;
+    p->n++;
+    return(p);
+  }
+  else{
+    printf("erreur plus de place dans la pile \n");
+    return;
+  }
+ }
+
+
+
+int  pop(Pile *p){
+  int e;
+  if(estVide(p)==0){
+    e=p->tab[p->n];
+    p->tab[p->n]=NULL;
+    p->n--;
+    return(e);
+  }
+  else{
+    printf("plus rien à depiler");
+    return 0;
+  }
+}
+
+void calcule(int i,char *chaine,Pile *p){
+  int k;
+  switch (chaine[i])
+  {
+
+    case '+':
+    push(pop(p)+pop(p),p);
+    break;
+
+    case '-':
+
+    k=pop(p);
+    push(pop(p)-k,p);
+    break;
+
+    case '*':
+    push(pop(p)*pop(p),p);
+    break;
+
+    case '/':
+
+    k=pop(p);
+    push(pop(p)/k,p);
+    break;
+  }
+
+
+}
+
+void main(){
+i=0;
+char *maPosition;
+ Pile *p=genererPile(10);
+char chaine[]="34+75-*"; // pas fini
+
+ for(int i=0;i<7;i++){
+     if((int)'chaine[i]'<=9 && (int)'chaine[i]'>=0){
+     push((int)chaine[i],p);
+     maPosition++;
+   }else {
+   calcule(i,maPosition,p);
+
+}
+ }
+ printf(" RESULTAT = %d",p->tab[0]);
+ }

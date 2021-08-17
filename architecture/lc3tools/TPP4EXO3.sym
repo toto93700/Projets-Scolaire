@@ -1,0 +1,9 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	loop              3008
+//	fini              300D
+//	n                 300E
+//	k                 300F
+

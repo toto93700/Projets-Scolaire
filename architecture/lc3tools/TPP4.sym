@@ -1,0 +1,9 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	X                 300C
+//	Y                 300D
+//	Z                 300F
+//	E39               3010
+

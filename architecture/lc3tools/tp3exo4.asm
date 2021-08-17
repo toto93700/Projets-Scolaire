@@ -1,0 +1,16 @@
+
+
+	.ORIG x3000
+	AND	R0,R0,0	;r0=0
+	AND 	R1,R1,0	;r1=0
+	LD 	R2,N
+	NOT R2,R2
+	ADD R2,R2,1
+LOOP:
+	ADD R1, R1, 1   ;R1++
+	ADD R0,R0,1
+	ADD R3 ,R0,R2   ;R3=R0+(-RN)
+	BRNp LOOP
+	FINI: HALT
+N:	.FILL 128
+	.END

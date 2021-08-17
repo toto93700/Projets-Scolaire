@@ -1,0 +1,27 @@
+	ORIG x3000
+	AND R0,R0,0
+	GETC
+	LD R1,x0
+	LD R2,x9
+	NOT R0,R0
+	ADD R0,R0,1
+	ADD R3,R1,R0
+	BRNZ test2
+	AND R0,R0,0
+	ADD R0,R0,-1
+	HALT
+	
+test2:  ADD R3,R2,R0
+	BRZP opera
+	AND R0,R0,0
+	ADD R0,R0,-1
+	HALT
+
+opera:  NOT R0,R0
+	ADD R0,R0,1
+	ADD R0,R0,10
+	HALT
+
+x0: .fill x30
+x9: .fill x39
+	.END

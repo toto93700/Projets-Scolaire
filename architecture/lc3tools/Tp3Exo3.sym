@@ -1,0 +1,9 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	loop              300C
+//	T1                3012
+//	T2                301C
+//	Taille            3026
+

@@ -1,0 +1,10 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	opos              3006
+//	suite             300C
+//	x                 300E
+//	y                 300F
+//	z                 3010
+

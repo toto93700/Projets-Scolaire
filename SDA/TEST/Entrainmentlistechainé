@@ -1,0 +1,67 @@
+#include <stdio.h>
+
+
+
+
+
+
+typedef struct cel_s {
+
+ int e;
+ cels *suivant;
+
+}cels;
+
+typedef struct fill_s{
+
+  cels *debut;
+  cels *fin;
+
+
+}fill;
+
+fill *enfiler(int element,fill *f){
+  if(f->debut=NULL){
+   cels *x=malloc(sizeof(cels));
+   x->e=element;
+   x->suivant=NULL;
+   f->debut=x;
+   f->fin=NULL;
+   f->fin=f->debut;
+    return(f);
+  }
+  cels *x=malloc(sizeof(cels));
+  x->e=element;
+  x->suivant=NULL;
+  f->fin->suivant=x;
+  f->fin=x;
+   return(f);
+ }
+}
+
+int defiler(fill *f){
+  int e;
+
+  monPointeur=f->debut->suivant;
+  e=f->debut->e
+  free(f->debut);
+  f->debut=monPointeur;
+  return (e);
+}
+
+void main(){
+
+
+
+fill *f=malloc(sizeof(fill));
+f=enfiler(5,f);
+f=enfiler(6,f);
+f=enfiler(7,f);
+cels monPointeur=f->debut;
+while(monPointeur->suivant!=NULL){
+  printf(" element = %d \n",monPointeur->e)
+  monPointeur=monPointeur->suivant;
+}
+
+
+}

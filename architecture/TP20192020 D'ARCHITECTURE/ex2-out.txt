@@ -1,0 +1,81 @@
+************************************************************
+****  Affichage du fichier ex2-etudiants.db
+****  Test : seek, read, pos
+****
+ 0 : 11255431 : Romain : Roux :
+ 1 : 11344221 : Sylvie : Renaud :
+ 2 : 11346431 : Sophie : Lucchini :
+ 3 : 11348231 : Christophe : Chevalier :
+ 4 : 11348411 : Fabrice : Bernard :
+ 5 : 11349451 : Pierre : Laurent :
+ 6 : 11352511 : Emmanuel : Ausoni :
+ 7 : 11353421 : Philippe : Petit :
+ 8 : 11354321 : Franc : Perrin :
+ 9 : 11355571 : Charlotte : Martin :
+10 : 11465432 : Lionel : Lavault :
+11 : 12165329 : Dominique : Lefevre :
+12 : 12321123 : Marie : Leblanc :
+13 : 12476324 : Justine : Blanc :
+****
+************************************************************
+****  Nombre d'enregistrements dans le fichier
+****  Test : pos
+****
+14 etudiants
+************************************************************
+****  Lecture d'enregistrements avec pos
+****  Test : seek, read 
+****
+Enregistrement 0
+ 0: 11255431 : Romain : Roux :
+Enregistrement 3
+ 3: 11348231 : Christophe : Chevalier :
+Enregistrement 6
+ 6: 11352511 : Emmanuel : Ausoni :
+Enregistrement 9
+ 9: 11355571 : Charlotte : Martin :
+Enregistrement 12
+12: 12321123 : Marie : Leblanc :
+****
+************************************************************
+****  Append enregistrement
+****  Test : end, write, pos
+****
+14: 12245329 : Thomas : Bernard :
+****
+************************************************************
+****  Swap enregistremente : 3 <-> 7
+****  Test : seek, read, write
+****
+****  Avant
+ 3: 11348231 : Christophe : Chevalier :
+ 7: 11353421 : Philippe : Petit :
+****  Apres
+ 3: 11353421 : Philippe : Petit :
+ 7: 11348231 : Christophe : Chevalier :
+****
+************************************************************
+****  Search : pos 11, invalid 11111111 
+****  Test : search
+****
+11: 12165329 : Dominique : Lefevre :
+OK Search element non present 11111111
+************************************************************
+****  Affichage du fichier ex2-etudiants.db
+****  Test : seek, read, pos
+****
+ 0 : 11255431 : Romain : Roux :
+ 1 : 11344221 : Sylvie : Renaud :
+ 2 : 11346431 : Sophie : Lucchini :
+ 3 : 11353421 : Philippe : Petit :
+ 4 : 11348411 : Fabrice : Bernard :
+ 5 : 11349451 : Pierre : Laurent :
+ 6 : 11352511 : Emmanuel : Ausoni :
+ 7 : 11348231 : Christophe : Chevalier :
+ 8 : 11354321 : Franc : Perrin :
+ 9 : 11355571 : Charlotte : Martin :
+10 : 11465432 : Lionel : Lavault :
+11 : 12165329 : Dominique : Lefevre :
+12 : 12321123 : Marie : Leblanc :
+13 : 12476324 : Justine : Blanc :
+14 : 12245329 : Thomas : Bernard :
