@@ -1,0 +1,25 @@
+resume complexite du nombre d'opération élémentaire pour le parcour de manière iterative :
+si on prend en compte que le fait de parcourire en profondeur dans notre fonction : parcourpronfondeur sans se soucier des fonction auxilière utilisé pour l'affichage des informations on obtient : t(n)=bloc0+bloc1+bloc2+bloc3 ;
+les informations sur comment sont calculé les blocs sont fournis 
+avec le code (en commentaire) 
+fialement en résumé on a:
+bloc0=o(2) ;  bloc1=o(8n)  ; bloc2=o(2)  ; bloc3=o(7n) ;
+ n étant le nombre de sommet : 
+
+finalement t(n)=4+15*n = o(n) ;
+
+-------------------------------------------------------
+resume complexite du nombre d'espace mémoire utilisé dans notre fonction parcourpronfondeur ( de manière itérative)
+après réfléxion nous utilisons dans cette fonction 3 list de taille n ainsi que la taille mémoire du graph passé en argument 
+donc on obtient t(n)=3*n + t(graphe(n)); 
+n étant le nombre de sommet
+notre valeur:t(graphe(n)) étant principalement composé d'un tableau (n*n) on obtient donc : t(n)=3n+n*n ;
+
+--------------------------
+ajoute en en-tete du pdf :  !! 
+
+vous trouverez ci-join un rar contenant tout les fichier c et h utilisé pour la réalisation du dm  il suffira simplement de compiler (maincompilable.C) et l'execute 
+
+-------- voila hugo essaie de corrige les faute j ai fait aucun effort je suis eclatax la 
+
+jte conseil de prendre aussi mon code et de mettre en comm dans la fonction recusive les temps  de chaque opération a droite et de faire des bloc comme moi pour réunire tous ce qui ya dans un for etc tu verra comment j'ai fait c vite fait  ducoup déduit de mes réponse pour la question 3 maiqs jpense c'est mieu de facon itérative en plus javaiqs deja entendu ça de la part du prof je crois
