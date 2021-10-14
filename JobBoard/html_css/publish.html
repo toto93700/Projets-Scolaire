@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Job Board</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+        integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles2.css">
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    </nav>
+    <!-- Header-->
+    <header class="bg-dark py-1">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Apply for the Job of your dreams!</h1>
+                <p class="lead fw-normal text-white-50 mb-0">Fetch and find the job ad that suits you!</p>
+            </div>
+        </div>
+    </header>
+    <!-- Section-->
+    <main>
+
+        <section class="container">
+            <div class="row justify-content-center mt-3">
+                <div class="col-5 text-center">
+                    <a href="/html_css/createPublish.html" class="link-info">Create a new publish</a>
+                </div>
+            </div>
+            <div class="row justify-content-md-center mt-5  d-flex align-items-center">
+                <div class="col-12 col-md-4 mb-2 pt-2">
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">What</span>
+                        <input type="text" class="form-control" id="patternJob" id="validationCustomUsername"
+                            aria-describedby="inputGroupPrepend" placeholder="Your Job !" required>
+                        <div class="invalid-feedback">
+                            Please choose a job.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4  mb-2 pt-2">
+
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">Where</span>
+                        <input type="text" class="form-control" id="patern" id="validationCustomUsername"
+                            aria-describedby="inputGroupPrepend" placeholder="Your Area">
+                        <div class="invalid-feedback">
+                            Please choose a city.
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class=" col-12 col-md-2 connectBtn">
+                    <button type="submit" class=" d-flex p-2 btn btn-primary btn-block" id="btnResearch">search</button>
+                </div>
+
+            </div>
+
+
+
+            <div class="container px-4 px-lg-5 mt-5 containerSection">
+                <div
+                    class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center sectionPublish">
+                </div>
+
+                <div class="row d-flex justify-content-between text-center mb-2">
+                    <div class="col-3 ">
+                        <button type="button" id="prev">
+                            <- </button>
+                    </div>
+                    <div class="col-3">
+                        <button type="button" id="next"> -> </button>
+                    </div>
+                </div>
+
+
+        </section>
+
+
+
+    </main>
+
+</body>
+<!-- Footer-->
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Epitech Project by : Zyad EL IDRISSI & Karim LOUAIL</p>
+    </div>
+</footer>
+<!-- Jquery core JS-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.13.0-rc.2/jquery-ui.min.js"
+    integrity="sha256-RQLbEU539dpygNMsBGZlplus6CkitaLy0btTCHcULpI=" crossorigin="anonymous"></script>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/loadNav.js"></script>
+<script src="js/loadPublish.js"></script>
+
+</html>

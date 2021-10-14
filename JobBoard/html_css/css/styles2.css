@@ -1,0 +1,17 @@
+@media screen and (max-width: 760px) {
+    .btnResherch{
+       
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+  }
+body{
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;   
+}
+main{
+    flex:1 !important;
+}
+
