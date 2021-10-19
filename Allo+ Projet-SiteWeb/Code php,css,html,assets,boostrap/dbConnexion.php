@@ -1,1 +1,0 @@
-<?php $db=new PDO('mysql:host=localhost;dbname=projetinfo;charset=utf8','root','');?>
